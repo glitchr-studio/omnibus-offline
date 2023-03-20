@@ -1,6 +1,6 @@
 {
-  "name": "omnibus/omnibus",
-  "description": "A framework agnostic database backup manager with user-definable procedures and support for S3, Dropbox, FTP, SFTP, and more with drivers for popular frameworks.",
+  "name": "omnibus/offline",
+  "description": "",
   "license": "MIT",
   "authors": [
     {
@@ -18,7 +18,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Omnibus\\": "src/"
+      "Omnibus\\Offline": ""
     }
   },
   "extra": {
