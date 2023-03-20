@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnibus\Offline;
+namespace Omnibus\Offline\Action;
 
 use Omnibus\Core\Action\ActionInterface;
 
