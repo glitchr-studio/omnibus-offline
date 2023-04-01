@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnibus\Offline;
+namespace Omnibus\Offline\Action;
 
 class GetSlipAction implements ActionInterface
 {
