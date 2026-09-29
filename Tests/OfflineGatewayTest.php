@@ -2,11 +2,11 @@
 
 namespace Omnibus\Offline\Tests;
 
-use Omnibus\Core\Model\Address;
-use Omnibus\Core\Model\Parcel;
-use Omnibus\Core\Model\Shipment;
-use Omnibus\Core\Model\TrackingStatus;
-use Omnibus\Core\Request\GetSlip;
+use Omnibus\Model\Address;
+use Omnibus\Model\Parcel;
+use Omnibus\Model\Shipment;
+use Omnibus\Model\TrackingStatus;
+use Omnibus\Request\GetSlip;
 use Omnibus\Offline\OfflineGatewayFactory;
 use PHPUnit\Framework\TestCase;
 

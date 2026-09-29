@@ -2,11 +2,11 @@
 
 namespace Omnibus\Offline\Action;
 
-use Omnibus\Core\Action\ActionInterface;
-use Omnibus\Core\Model\Address;
-use Omnibus\Core\Model\PickupPoint;
-use Omnibus\Core\Request\Pickup;
-use Omnibus\Core\Request\Request;
+use Omnibus\Action\ActionInterface;
+use Omnibus\Model\Address;
+use Omnibus\Model\PickupPoint;
+use Omnibus\Request\Pickup;
+use Omnibus\Request\Request;
 
 /** The shop's own counters (click & collect), as configured - wherever the customer is. */
 final class PickupAction implements ActionInterface

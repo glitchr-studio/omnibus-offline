@@ -2,8 +2,8 @@
 
 namespace Omnibus\Offline;
 
-use Omnibus\Core\Config;
-use Omnibus\Core\GatewayFactory;
+use Omnibus\Config;
+use Omnibus\GatewayFactory;
 use Omnibus\Offline\Action\PickupAction;
 use Omnibus\Offline\Action\ShippingAction;
 use Omnibus\Offline\Action\TrackingAction;
@@ -13,7 +13,7 @@ use Omnibus\Offline\Action\TrackingAction;
  * counter at the post office) or keeps it for collection.
  *
  *   options:
- *     rates: [...]                        # Omnibus\Core\Action\ConfiguredRatingAction
+ *     rates: [...]                        # Omnibus\Action\ConfiguredRatingAction
  *     tracking_url: 'https://www.laposte.fr/outils/suivre-vos-envois?code={number}'
  *     pickup_points:                      # click & collect
  *       - { id: shop, name: 'La boutique', street: ['1 rue ...'], postcode: '75001', city: Paris, country: FR,

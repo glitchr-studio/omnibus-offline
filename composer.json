@@ -2,17 +2,40 @@
     "name": "omnibus/offline",
     "type": "library",
     "description": "Omnibus offline carrier: the shop ships by itself - configured rates, a tracking number typed by hand, its own counters as pickup points.",
-    "keywords": ["shipping", "omnibus", "offline", "click and collect"],
+    "keywords": [
+        "shipping",
+        "omnibus",
+        "offline",
+        "click and collect"
+    ],
     "license": "LGPL-3.0-or-later",
-    "authors": [{"name": "Marco Meyer", "email": "marco.meyer@glitchr.io"}],
+    "authors": [
+        {
+            "name": "Marco Meyer",
+            "email": "marco.meyer@glitchr.io"
+        }
+    ],
     "require": {
         "php": ">=8.2",
-        "omnibus/core": "^2.0"
+        "glitchr/omnibus": "^2.0@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "^11.0"
     },
-    "autoload": {"psr-4": {"Omnibus\\Offline\\": ""}, "exclude-from-classmap": ["/Tests/"]},
-    "autoload-dev": {"psr-4": {"Omnibus\\Offline\\Tests\\": "Tests/"}},
-    "config": {"sort-packages": true}
+    "autoload": {
+        "psr-4": {
+            "Omnibus\\Offline\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnibus\\Offline\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
 }

@@ -2,11 +2,11 @@
 
 namespace Omnibus\Offline\Action;
 
-use Omnibus\Core\Action\ActionInterface;
-use Omnibus\Core\Model\Tracking as TrackingModel;
-use Omnibus\Core\Model\TrackingStatus;
-use Omnibus\Core\Request\Request;
-use Omnibus\Core\Request\Tracking;
+use Omnibus\Action\ActionInterface;
+use Omnibus\Model\Tracking as TrackingModel;
+use Omnibus\Model\TrackingStatus;
+use Omnibus\Request\Request;
+use Omnibus\Request\Tracking;
 
 /** No carrier to ask: the status is unknown - the shop says it in person, or follows the tracking link. */
 final class TrackingAction implements ActionInterface

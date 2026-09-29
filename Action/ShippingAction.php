@@ -2,10 +2,10 @@
 
 namespace Omnibus\Offline\Action;
 
-use Omnibus\Core\Action\ActionInterface;
-use Omnibus\Core\Model\Label;
-use Omnibus\Core\Request\Request;
-use Omnibus\Core\Request\Shipping;
+use Omnibus\Action\ActionInterface;
+use Omnibus\Model\Label;
+use Omnibus\Request\Request;
+use Omnibus\Request\Shipping;
 
 /**
  * Nothing to book: the tracking number is the one the shop typed (option
