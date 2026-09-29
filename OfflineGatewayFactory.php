@@ -2,27 +2,35 @@
 
 namespace Omnibus\Offline;
 
+use Omnibus\Core\Config;
 use Omnibus\Core\GatewayFactory;
+use Omnibus\Offline\Action\PickupAction;
 use Omnibus\Offline\Action\ShippingAction;
 use Omnibus\Offline\Action\TrackingAction;
-use Omnibus\Offline\RatingAction;
-use Omnibus\Offline\PickupAction;
-use Omnibus\Offline\GetSlipAction;
-use Omnibus\Offline\ParperlessAction;
 
-class OfflineGatewayFactory extends GatewayFactory
+/**
+ * No carrier API: the shop hands the parcel over itself (its own courier, a
+ * counter at the post office) or keeps it for collection.
+ *
+ *   options:
+ *     rates: [...]                        # Omnibus\Core\Action\ConfiguredRatingAction
+ *     tracking_url: 'https://www.laposte.fr/outils/suivre-vos-envois?code={number}'
+ *     pickup_points:                      # click & collect
+ *       - { id: shop, name: 'La boutique', street: ['1 rue ...'], postcode: '75001', city: Paris, country: FR,
+ *           opening_hours: { 1: [['10:00', '19:00']] } }
+ */
+final class OfflineGatewayFactory extends GatewayFactory
 {
-    protected function populateConfig(ArrayObject $config)
+    protected function populateConfig(Config $config): void
     {
         $config->defaults([
             'omnibus.factory_name' => 'offline',
             'omnibus.factory_title' => 'Offline',
-            'omnibus.action.shipping' => new ShippingAction(),
+            'tracking_url' => null,
+            'pickup_points' => [],
+            'omnibus.action.shipping' => static fn (Config $c) => new ShippingAction($c['tracking_url']),
             'omnibus.action.tracking' => new TrackingAction(),
-            'omnibus.action.rating' => new RatingAction(),
-            'omnibus.action.pickup' => new PickupAction(),
-            'omnibus.action.parperless' => new ParperlessAction(),
-            'omnibus.action.get_slip' => new GetSlipAction(),
+            'omnibus.action.pickup' => static fn (Config $c) => new PickupAction($c['pickup_points']),
         ]);
     }
 }
