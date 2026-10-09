@@ -22,4 +22,4 @@ omnibus:
                     - { id: shop, name: 'La boutique', street: ['1 rue ...'], postcode: '75001', city: Paris, country: FR }
 ```
 
-License: LGPL-3.0-or-later.
+License: MIT since 2026-10-10; earlier versions remain published under LGPL-3.0-or-later.
